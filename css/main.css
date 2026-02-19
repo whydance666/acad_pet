@@ -326,7 +326,15 @@ header nav ul li:not(.btn) a:hover{
 }
 
 .contact-form button:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
+}
+
+.contact-form input::placeholder{
+  color: #fff;
+}
+
+.contact-form textarea::placeholder{
+  color: #fff;
 }
 
 /*адаптивность*/
