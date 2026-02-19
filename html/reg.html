@@ -4,15 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/font.css">
-  <link rel="stylesheet" href="/css/reg.css">
+  <link rel="stylesheet" href="/css/login.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-  <title>Registration</title>
+  <title>Register</title>
 </head>
 <body>
   <div class="wrapper">
-    <form action="">
-    <h1>Login</h1>
+    <form action="" id="registerForm" novalidate>
+      <h1>Registration</h1>
+      <div class="input_box">
+        <input type="email" id="email" placeholder="Your email" required>
+        <i class="bx bx-at"></i>
+        <small class="error-message" id="emailError"></small>
+      </div>
+      <div class="input_box">
+        <input type="text" id="username" placeholder="Username" required>
+        <i class="bx bx-user"></i>
+      </div>
+      <div class="input_box">
+        <input type="password" id="password" placeholder="Password" required>
+        <i class="bx bx-lock"></i>
+      </div>
+      <div class="input_box">
+        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+        <i class="bx bx-lock"></i>
+        <small class="error-message" id="confirmPasswordError"></small>
+      </div>
+      <button type="submit" class="btn">Register</button>
     </form>
   </div>
+  <script src="/scripts/main.js"></script>
 </body>
 </html>
