@@ -321,6 +321,7 @@ header nav ul li:not(.btn) a:hover{
   border-radius: 15px;
   padding: 9px 17px;
   color: #fff;
+  cursor: pointer;
   background-color: transparent;
   transition: all 500ms ease;
 }
