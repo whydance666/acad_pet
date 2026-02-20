@@ -6,8 +6,71 @@ body{
   background: red;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img{
+  max-width: 100%;
+}
+
 .wrapper{
+  width: 100%;
   background: green;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header{
+  font-weight: 800; 
+  font-size: 30px;
+}
+
+.header-left,
+.header-right {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-left{
+  justify-content: left;
+}
+
+.header-right{
+  justify-content: right;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn i {
+  font-size: 28px;
 }
 
 /* ===== SIDEBAR ===== */
