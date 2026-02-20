@@ -3,7 +3,7 @@ body{
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  background: red;
+  background: rgba(2, 0, 36, 1) 13%;
 }
 
 html, body {
@@ -18,9 +18,19 @@ img{
   max-width: 100%;
 }
 
+/* НЕ ЗАБЫТЬ УБРАТЬ */
+h1{
+  margin: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .wrapper{
   width: 100%;
-  background: green;
+  background: rgba(2, 0, 36, 1) 13%;
 }
 
 .container {
@@ -118,6 +128,45 @@ body.no-scroll {
 }
 
 
+.contacts {
+  padding: 120px 0;
+}
+
+.contacts-container {
+  width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Левая часть */
+
+.contacts-left {
+  margin-top: -60px;
+  width: 500px;
+  color: white;
+}
+
+.contacts-left h2 {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.contacts-left p {
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.contact-info div {
+  margin-bottom: 10px;
+}
+
+/* Правая часть (форма) */
+.contacts-right {
+  width: 600px;
+}
+
 
 /* ===== SIDEBAR ===== */
 
@@ -127,7 +176,10 @@ body.no-scroll {
   left: 0;
   width: 260px;
   height: 100vh;
-  background: green;
+  background: rgba(6, 5, 83, 1);
+  border-right: 2px solid #fff; 
+  border-top-right-radius: 20px;   
+  border-bottom-right-radius: 20px; 
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -163,7 +215,7 @@ body.no-scroll {
 }
 
 .sidebar-item:hover {
-  background: #161b22;
+  background: rgba(2, 0, 36, 1) 13%;
 }
 
 .sidebar-section h4 {
@@ -175,11 +227,6 @@ body.no-scroll {
 .small {
   font-size: 13px;
   opacity: 0.8;
-}
-
-.sidebar hr {
-  border: none;
-  border-top: 1px solid #30363d;
 }
 
 .menu-toggle {
