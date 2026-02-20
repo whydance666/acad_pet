@@ -74,21 +74,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
-const openBtn = document.getElementById("openMenu");
-const closeBtn = document.getElementById("closeMenu");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const openBtn = document.getElementById("openMenu");
+  const closeBtn = document.getElementById("closeMenu");
+  const menuIcon = document.getElementById("menuIcon");
 
-function openMenu() {
-  sidebar.classList.add("active");
-  overlay.classList.add("active");
-}
+  let isOpen = false;
 
-function closeMenu() {
-  sidebar.classList.remove("active");
-  overlay.classList.remove("active");
-}
+  function openMenu() {
+    isOpen = true;
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+    document.body.classList.add("no-scroll");
+    openBtn.classList.add("morph");
 
-openBtn.addEventListener("click", openMenu);
-closeBtn.addEventListener("click", closeMenu);
-overlay.addEventListener("click", closeMenu);
+    menuIcon.classList.remove("bx-menu");
+    menuIcon.classList.add("bx-x");
+  }
+
+  function closeMenu() {
+    isOpen = false;
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+    openBtn.classList.remove("morph");
+
+    menuIcon.classList.remove("bx-x");
+    menuIcon.classList.add("bx-menu");
+  }
+
+  function toggleMenu() {
+    isOpen ? closeMenu() : openMenu();
+  }
+
+  // События
+  openBtn.addEventListener("click", toggleMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+
+  // Закрытие по ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) {
+      closeMenu();
+    }
+  });
