@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // GLOW EFFECT
   const wrapper = document.querySelector('.wrapper');
   if (wrapper) {
     wrapper.addEventListener('mousemove', (e) => {
@@ -12,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // FORM ELEMENTS
+  // форма
   const form = document.getElementById('registerForm');
   const email = document.getElementById('email');
   const emailError = document.getElementById('emailError');
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!form || !email || !password || !confirmPassword) return;
 
-  // VALIDATION FUNCTIONS
+  // валидация
   function validateEmail() {
     const emailValue = email.value.trim();
     if (emailValue === '') {
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // EVENT LISTENERS
+  
   email.addEventListener('input', validateEmail);
   password.addEventListener('input', validatePasswords);
   confirmPassword.addEventListener('input', validatePasswords);
