@@ -10,17 +10,42 @@
 <body>
   <div class="wrapper">
     <header class="container">
-      <div class="lk_bar">
+        <aside class="sidebar" id="sidebar">
+          <div class="sidebar-header">
+              <button class="close-btn" id="closeMenu">✕</button>
+            </div>
+            <nav class="sidebar-nav">
+              <a href="#" class="sidebar-item">Home</a>
+              <a href="#" class="sidebar-item">Issues</a>
+              <a href="#" class="sidebar-item">Pull requests</a>
+              <a href="#" class="sidebar-item">Repositories</a>
+              <a href="#" class="sidebar-item">Projects</a>
+            </nav>
+          <div class="sidebar-section">
+            <h4>Top repositories</h4>
+            <a href="#" class="sidebar-item small">item</a>
+            <a href="#" class="sidebar-item small">item</a>
+          </div>
+        </aside>
+
+      <div class="header-left">
+        <button class="menu-btn" id="openMenu">☰</button>
         <nav>
           <ul>
-            <a href="#"> <button class="btn">repositories</button> </a>
-            <a href="#"> <button class="btn">projects</button> </a>
-            <a href="#"> <button class="btn">favoriets</button> </a>
-            <a href="#"> <button class="btn">dashbord</button> </a>
+            <a href="#"> <button class="btn">PROFILE</button> </a>
+            <a href="#"> <button class="btn">MENU</button> </a>
           </ul>
-        </nav>
+        </nav>  
+      </div>
+      <div class="header-right">
+        <ul>
+          <a href="#"> <button class="btn">repositories</button> </a>
+          <a href="#"> <button class="btn">favoriets</button> </a>
+          <a href="#"> <button class="btn">projects</button> </a>
+        </ul>
       </div>
     </header>
   </div>
+  <script src="/scripts/main.js"></script>
 </body>
 </html>
