@@ -6,76 +6,238 @@
   <link rel="stylesheet" href="/css/font.css">
   <link rel="stylesheet" href="/css/lk.css"> 
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="/img/logo GUU.svg">
   <link rel="icon" type="image/svg+xml" href="/img/logo GUU.svg">
   <link rel="apple-touch-icon" href="/img/logo GUU.svg">
   <title>LK</title>
 </head>
 <body>
   <div class="wrapper">
-    <header class="container">
-        <aside class="sidebar" id="sidebar">
-          <div class="sidebar-header">
-              <button class="close-btn" id="closeMenu"><i class="bx bx-x"></i></button>
-            </div>
-            <nav class="sidebar-nav">
-              <a href="#" class="sidebar-item">Home</a>
-              <a href="#" class="sidebar-item">Issues</a>
-              <a href="#" class="sidebar-item">Pull requests</a>
-              <a href="#" class="sidebar-item">Repositories</a>
-              <a href="#" class="sidebar-item">Projects</a>
-            </nav>
-          <div class="sidebar-section">
-            <h4>Top repositories</h4>
-            <a href="#" class="sidebar-item small">item</a>
-            <a href="#" class="sidebar-item small">item</a>
-          </div>
-        </aside>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button class="close-btn" id="closeMenu"><i class="bx bx-x"></i></button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="sidebar-item"><i class="bx bx-home-alt"></i> Home</a>
+        <a href="#" class="sidebar-item"><i class="bx bx-error-circle"></i> Issues</a>
+        <a href="#" class="sidebar-item"><i class="bx bx-git-pull-request"></i> Pull requests</a>
+        <a href="#" class="sidebar-item"><i class="bx bx-book"></i> Repositories</a>
+        <a href="#" class="sidebar-item"><i class="bx bx-git-repo-forked"></i> Projects</a>
+      </nav>
+      <div class="sidebar-section">
+        <h4>Top repositories</h4>
+        <a href="#" class="sidebar-item small"><i class="bx bx-book-alt"></i> sumgit/frontend</a>
+        <a href="#" class="sidebar-item small"><i class="bx bx-book-alt"></i> sumgit/backend-api</a>
+        <a href="#" class="sidebar-item small"><i class="bx bx-book-alt"></i> sumgit/docs</a>
+      </div>
+    </aside>
 
+
+    <header class="container">
       <div class="header-left">
         <button class="menu-btn" id="openMenu"><i class="bx bx-menu" id="menuIcon"></i></button>
-        <nav>
-          <ul>
-            <li><a href="#" class="user_btn"><i class="bx bx-user"></i></a></li>
-          </ul>
-        </nav>  
+        <span class="logo-text">SUM GIT</span>
       </div>
       <div class="header-right">
         <ul>
-          <li><a href="#" class="repositories_btn"><i class="bx bx-book"></i></a></li>
-          <li><a href="#" class="favoriets_btn"><i class="bx bx-star"></i></a></li>
-          <li><a href="#" class="projects_btn"><i class="bx bx-git-repo-forked"></i></a></li>
+          <li><a href="#" class="repositories_btn" title="Repositories"><i class="bx bx-book"></i></a></li>
+          <li><a href="#" class="favoriets_btn" title="Stars"><i class="bx bx-star"></i></a></li>
+          <li><a href="#" class="projects_btn" title="Projects"><i class="bx bx-git-repo-forked"></i></a></li>
+          <li><a href="#" class="user_btn" title="Profile"><i class="bx bx-user-circle"></i></a></li>
         </ul>
       </div>
     </header>
-  <div class="overlay" id="overlay"></div>
-  <div class="hero-container">
-    <div class="primer">
-      <h1>NEXT CONTENT</h1>
-    </div>
-  </div>
-  <footer>
-    <section class="contacts">
-        <div class="contacts-container">
-          <div class="contacts-left">
-            <p>
-              Есть вопросы или предложения? <br>
-              Напишите нам — мы свяжемся с вами в ближайшее время.
-            </p>
-            <div class="contact-info">
-            </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    
+    <main class="main-content">
+
+      <!-- ПРОФИЛЬ -->
+      <section class="profile-section">
+        <div class="profile-card">
+          <div class="avatar">
+            <i class="bx bx-user-circle"></i>
           </div>
-          <div class="contacts-right">
-              <div>
-                <strong>Email:</strong>
-                <span>support@guu.com</span>
-                <strong>Телефон:</strong>
-                <span>+7(968)-597-71-73</span>
-              </div>
+          <div class="profile-info">
+            <h2>username</h2>
+            <p class="profile-bio">Full-stack developer · Open source enthusiast</p>
+            <div class="profile-stats">
+              <span><i class="bx bx-group"></i> 12 followers</span>
+              <span><i class="bx bx-user-plus"></i> 8 following</span>
+              <span><i class="bx bx-book"></i> 5 repositories</span>
+            </div>
           </div>
         </div>
       </section>
-  </footer>
+
+      <!-- АКТИВНОСТЬ -->
+      <section class="content-grid">
+
+        <!-- Левая колонка -->
+        <div class="col-left">
+
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="bx bx-history"></i> Recent activity</h3>
+            </div>
+            <ul class="activity-list">
+              <li class="activity-item">
+                <i class="bx bx-git-commit text-green"></i>
+                <div>
+                  <span class="activity-text">Pushed to <a href="#">sumgit/frontend</a></span>
+                  <span class="activity-time">2 hours ago</span>
+                </div>
+              </li>
+              <li class="activity-item">
+                <i class="bx bx-git-pull-request text-blue"></i>
+                <div>
+                  <span class="activity-text">Opened PR in <a href="#">sumgit/backend-api</a></span>
+                  <span class="activity-time">5 hours ago</span>
+                </div>
+              </li>
+              <li class="activity-item">
+                <i class="bx bx-star text-yellow"></i>
+                <div>
+                  <span class="activity-text">Starred <a href="#">openai/whisper</a></span>
+                  <span class="activity-time">1 day ago</span>
+                </div>
+              </li>
+              <li class="activity-item">
+                <i class="bx bx-error-circle text-red"></i>
+                <div>
+                  <span class="activity-text">Closed issue in <a href="#">sumgit/docs</a></span>
+                  <span class="activity-time">2 days ago</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="bx bx-error-circle"></i> Your issues</h3>
+              <a href="#" class="card-link">View all</a>
+            </div>
+            <ul class="issue-list">
+              <li class="issue-item open">
+                <i class="bx bx-radio-circle-marked"></i>
+                <div>
+                  <a href="#">Fix authentication bug on mobile</a>
+                  <span class="issue-meta">sumgit/frontend · opened 3 days ago</span>
+                </div>
+              </li>
+              <li class="issue-item open">
+                <i class="bx bx-radio-circle-marked"></i>
+                <div>
+                  <a href="#">Add dark mode support</a>
+                  <span class="issue-meta">sumgit/frontend · opened 5 days ago</span>
+                </div>
+              </li>
+              <li class="issue-item closed">
+                <i class="bx bx-check-circle"></i>
+                <div>
+                  <a href="#">Update README documentation</a>
+                  <span class="issue-meta">sumgit/docs · closed 1 week ago</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Правая колонка -->
+        <div class="col-right">
+
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="bx bx-book"></i> Repositories</h3>
+              <a href="#" class="card-link">New</a>
+            </div>
+            <ul class="repo-list">
+              <li class="repo-item">
+                <div class="repo-info">
+                  <a href="#" class="repo-name">sumgit/frontend</a>
+                  <p class="repo-desc">Main frontend application built with vanilla JS</p>
+                  <div class="repo-meta">
+                    <span class="repo-lang"><span class="lang-dot js"></span>JavaScript</span>
+                    <span><i class="bx bx-star"></i> 4</span>
+                    <span><i class="bx bx-git-branch"></i> 2</span>
+                  </div>
+                </div>
+              </li>
+              <li class="repo-item">
+                <div class="repo-info">
+                  <a href="#" class="repo-name">sumgit/backend-api</a>
+                  <p class="repo-desc">REST API server for the SUM GIT platform</p>
+                  <div class="repo-meta">
+                    <span class="repo-lang"><span class="lang-dot python"></span>Python</span>
+                    <span><i class="bx bx-star"></i> 2</span>
+                    <span><i class="bx bx-git-branch"></i> 3</span>
+                  </div>
+                </div>
+              </li>
+              <li class="repo-item">
+                <div class="repo-info">
+                  <a href="#" class="repo-name">sumgit/docs</a>
+                  <p class="repo-desc">Project documentation and guides</p>
+                  <div class="repo-meta">
+                    <span class="repo-lang"><span class="lang-dot markdown"></span>Markdown</span>
+                    <span><i class="bx bx-star"></i> 1</span>
+                    <span><i class="bx bx-git-branch"></i> 1</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="bx bx-git-pull-request"></i> Pull requests</h3>
+              <a href="#" class="card-link">View all</a>
+            </div>
+            <ul class="issue-list">
+              <li class="issue-item open">
+                <i class="bx bx-git-pull-request"></i>
+                <div>
+                  <a href="#">Refactor auth module</a>
+                  <span class="issue-meta">sumgit/backend-api · opened 1 day ago</span>
+                </div>
+              </li>
+              <li class="issue-item open">
+                <i class="bx bx-git-pull-request"></i>
+                <div>
+                  <a href="#">Add responsive styles for mobile</a>
+                  <span class="issue-meta">sumgit/frontend · opened 4 days ago</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <section class="contacts">
+        <div class="contacts-container">
+          <div class="contacts-left">
+            <p>Есть вопросы или предложения? <br>
+              Напишите нам — мы свяжемся с вами в ближайшее время.</p>
+          </div>
+          <div class="contacts-right">
+            <div>
+              <strong>Email:</strong>
+              <span>support@guu.com</span>
+              &nbsp;&nbsp;
+              <strong>Телефон:</strong>
+              <span>+7(968)-597-71-73</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+
   </div>
   <script src="/scripts/main.js"></script>
 </body>
