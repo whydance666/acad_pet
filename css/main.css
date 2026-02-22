@@ -252,6 +252,18 @@ header nav ul li:not(.btn) a:hover{
   width: 50px;
 }
 
+.images-group.single {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: auto;
+}
+
+.images-group.single img {
+  position: static;
+  border-radius: 30px;
+}
+
 .divider {
   border: none;           
   height: 2px;            
@@ -336,6 +348,40 @@ header nav ul li:not(.btn) a:hover{
 
 .contact-form textarea::placeholder{
   color: #fff;
+}
+
+.images-group img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.images-group img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 100, 0.5);
+}
+
+.contact-form textarea {
+  resize: none;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+
+/* Для Chrome, Safari, Edge */
+.contact-form textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.contact-form textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.contact-form textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form textarea::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /*адаптивность*/
