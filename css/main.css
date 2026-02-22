@@ -37,11 +37,24 @@ img{
   margin: 0 auto;
 }
 
-/* header*/
+/* header */
 .header{
   padding: 50px 0;
   font-weight: 800; 
   font-size: 30px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s ease;
+  padding: 15px 0;
+}
+
+header.scrolled {
+  background: rgba(2, 0, 36, 0.95);
+  backdrop-filter: blur(10px);
 }
 
 header nav{
@@ -202,12 +215,21 @@ header nav ul li:not(.btn) a:hover{
   text-align: left;
 }
 
+/* ВАЖНО: один объединённый блок — flex + анимация */
 .about_block_list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: -140px;
   margin-bottom: 200px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.about_block_list.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about_block_list h4 {
@@ -219,6 +241,9 @@ header nav ul li:not(.btn) a:hover{
   position: relative;
   width: 600px;
   height: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Главная картинка */
@@ -237,21 +262,6 @@ header nav ul li:not(.btn) a:hover{
   border-radius: 30px;
 }
 
-/* контроль под 2 картинки */
-.images-group {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-
-.listimg{
-  position: relative;
-  top: 10px;
-  left: 1000px;
-  width: 50px;
-}
-
 .images-group.single {
   display: flex;
   align-items: center;
@@ -262,6 +272,23 @@ header nav ul li:not(.btn) a:hover{
 .images-group.single img {
   position: static;
   border-radius: 30px;
+}
+
+/* hover на картинках */
+.images-group img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.images-group img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 100, 0.5);
+}
+
+.listimg{
+  position: relative;
+  top: 10px;
+  left: 1000px;
+  width: 50px;
 }
 
 .divider {
@@ -286,7 +313,6 @@ header nav ul li:not(.btn) a:hover{
 }
 
 /* Левая часть */
-
 .contacts-left {
   margin-top: -60px;
   width: 500px;
@@ -350,14 +376,6 @@ header nav ul li:not(.btn) a:hover{
   color: #fff;
 }
 
-.images-group img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.images-group img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 100, 0.5);
-}
-
 .contact-form textarea {
   resize: none;
   overflow-y: auto;
@@ -365,7 +383,6 @@ header nav ul li:not(.btn) a:hover{
   scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 }
 
-/* Для Chrome, Safari, Edge */
 .contact-form textarea::-webkit-scrollbar {
   width: 6px;
 }
@@ -386,20 +403,21 @@ header nav ul li:not(.btn) a:hover{
 
 /*адаптивность*/
 
-/*планшеты и маленькие ноутбуки */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
+  .conteiner {
+    width: 95%;
+  }
+}
 
-  /* контейнер становится уже */
+@media (max-width: 1200px) {
   .conteiner {
     width: 90%;
   }
 
-  /* кубик сдвигается ближе */
   .hero .cube{
     left: 700px;
     width: 300px;
   }
-
 }
 
 @media (max-width: 1210px) {
@@ -408,9 +426,7 @@ header nav ul li:not(.btn) a:hover{
   }
 }
 
-/*планшеты*/
 @media (max-width: 992px) {
-
   header nav {
     float: none;
     width: 100%;
@@ -431,14 +447,11 @@ header nav ul li:not(.btn) a:hover{
   }
 }
 
-/*смартфоны */
 @media (max-width: 768px) {
-
   .conteiner {
     width: 95%;
   }
 
-  /* кнопки становятcя в колонку */
   .a_btnmain {
     display: block;
     margin-top: 15px;
@@ -466,9 +479,7 @@ header nav ul li:not(.btn) a:hover{
   }
 }
 
-/*маленькие телефоны  */
 @media (max-width: 480px) {
-
   .hero--info h1 {
     font-size: 26px;
   }
@@ -480,12 +491,5 @@ header nav ul li:not(.btn) a:hover{
   .hero .cube {
     top: 320px;
     width: 150px;
-  }
-}
-
-/*ниже костыли*/
-@media (max-width: 1400px) {
-  .conteiner {
-    width: 95%;
   }
 }

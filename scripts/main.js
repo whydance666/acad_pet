@@ -69,6 +69,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 1. Появление блоков при скролле
+  const blocks = document.querySelectorAll('.about_block_list');
+  if (blocks.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    blocks.forEach(el => observer.observe(el));
+  }
+
+  // 2. Sticky header с фоном при скролле
+  const header = document.querySelector('header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  }
+
+  // 3. Параллакс на hero
+  const heroInfo = document.querySelector('.hero--info');
+  if (heroInfo) {
+    window.addEventListener('scroll', () => {
+      heroInfo.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+      heroInfo.style.opacity = 1 - window.scrollY / 600;
+    });
+  }
+
 });
 
 // Sidebar
