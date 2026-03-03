@@ -17,8 +17,6 @@ body {
   color: #fff;
 }
 
-/* ===== КАРТОЧКА ===== */
-
 .wrapper {
   position: relative;
   width: 420px;
@@ -35,7 +33,6 @@ body {
   animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Эффект курсора */
 .wrapper::before {
   content: "";
   position: absolute;
@@ -63,15 +60,11 @@ body {
   }
 }
 
-/* ===== ЗАГОЛОВОК ===== */
-
 .wrapper h1 {
   font-size: 36px;
   text-align: center;
   margin-bottom: 10px;
 }
-
-/* ===== ПОЛЯ ВВОДА ===== */
 
 .input_box {
   width: 100%;
@@ -111,8 +104,6 @@ body {
   pointer-events: none;
 }
 
-/* ===== ВАЛИДАЦИЯ ===== */
-
 input.error {
   border-color: #ff4d4d !important;
   box-shadow: 0 0 8px rgba(255, 77, 77, 0.5) !important;
@@ -126,8 +117,6 @@ input.error {
   bottom: -20px;
   left: 20px;
 }
-
-/* ===== КНОПКА ===== */
 
 .btn {
   width: 100%;
@@ -147,8 +136,6 @@ input.error {
   background: rgb(10, 9, 59);
   transform: translateY(-2px);
 }
-
-/* ===== REMEMBER ME (только login) ===== */
 
 .remember {
   display: flex;
@@ -170,8 +157,6 @@ input.error {
 .remember a:hover {
   text-decoration: underline;
 }
-
-/* ===== ССЫЛКА НА РЕГИСТРАЦИЮ (только login) ===== */
 
 .register_link {
   font-size: 14px;
